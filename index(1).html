@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nostalgie</title>
+<meta name="description" content="Nostalgie, par l’Atelier 83 : enseignes en bois faites à la main autour de l'ancien logo de la Ville d'Aylmer. Drops en quantité limitée, liste privée.">
+<link rel="canonical" href="https://aylmerlove.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aylmerlove.com/">
+<meta property="og:title" content="Nostalgie · Atelier 83">
+<meta property="og:description" content="Enseignes en bois inspirées de l’ancien logo d’Aylmer. Drops en quantité limitée. Rejoins la liste privée.">
+<meta property="og:image" content="https://aylmerlove.com/images/partage.jpg">
+<meta property="og:locale" content="fr_CA">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Hanken+Grotesk:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#E8E7E2; --surface:#F3F2EE; --ink:#1B1C1E; --muted:#585B5A; --line:rgba(27,28,30,.16);
+  --blue:#1D3E9E; --green:#2A955C; --navy:#15275F; --btn-ink:#F3F2EE;
+  --display:"Young Serif", "Rockwell", Georgia, serif;
+  --body:"Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"DM Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --gutter:clamp(16px,4vw,48px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#121312; --surface:#1B1C1B; --ink:#ECE9E2; --muted:#A3A39C; --line:rgba(236,233,226,.16);
+    --blue:#8EA5FF; --green:#5CC98C; --navy:#C9D3FF; --btn-ink:#121312;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#121312; --surface:#1B1C1B; --ink:#ECE9E2; --muted:#A3A39C; --line:rgba(236,233,226,.16);
+  --blue:#8EA5FF; --green:#5CC98C; --navy:#C9D3FF; --btn-ink:#121312;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--gutter)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* Barre du haut */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px;border-bottom:1px solid var(--line)}
+.brand{font-family:var(--display);font-size:20px;text-decoration:none}
+.top a.label{text-decoration:none}
+.top a.label:hover{color:var(--ink)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,72px);align-items:center;padding-block:clamp(40px,7vw,96px)}
+.hero h1{
+  font-family:var(--display);font-weight:400;line-height:.92;letter-spacing:-.02em;margin:18px 0 22px;
+  font-size:clamp(64px,11vw,148px);
+  background:linear-gradient(180deg,var(--blue) 0 50%,var(--green) 50% 75%,var(--navy) 75% 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  -webkit-mask-image:repeating-linear-gradient(180deg,#000 0 .105em,transparent .105em .13em);
+          mask-image:repeating-linear-gradient(180deg,#000 0 .105em,transparent .105em .13em);
+  padding-bottom:.06em;
+}
+.lede{font-size:clamp(18px,1.6vw,20px);max-width:34ch;margin:0 0 32px;color:var(--ink)}
+.hero-photo{position:relative}
+.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:40% 55%;border-radius:2px}
+.hero-photo figcaption{margin-top:10px}
+
+/* Formulaire */
+.signup{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:clamp(20px,3vw,28px);max-width:480px}
+.signup h2{font-family:var(--display);font-weight:400;font-size:24px;line-height:1.2;margin:0 0 6px;text-wrap:balance}
+.signup p.sub{margin:0 0 18px;color:var(--muted);font-size:15px}
+.fields{display:grid;gap:12px}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:5px}
+.field input,.field textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:3px;background:var(--bg);color:var(--ink)}
+.field textarea{resize:vertical;min-height:84px;line-height:1.45}
+.field textarea::placeholder{color:var(--muted);opacity:.8}
+.field .opt{font-weight:400;color:var(--muted)}
+.field input:focus-visible,.field textarea:focus-visible,.consent input:focus-visible,.btn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.consent input{margin-top:3px;width:17px;height:17px;accent-color:var(--blue);flex:none}
+.btn{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;font-size:16px;background:var(--ink);color:var(--btn-ink);padding:14px 20px;border-radius:3px;width:100%;transition:background .2s}
+.btn:hover{background:var(--blue)}
+.btn[disabled]{opacity:.6;cursor:wait}
+.msg{margin:12px 0 0;font-size:14.5px}
+.msg.ok{color:var(--green);font-weight:600}
+.msg.err{color:#C0392B}
+.hp{position:absolute;left:-9999px}
+.done h2{color:var(--green)}
+
+/* Sections */
+section{padding-block:clamp(56px,8vw,104px);border-top:1px solid var(--line)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.head h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.6vw,56px);line-height:1.02;margin:10px 0 0;text-wrap:balance}
+.head p{max-width:42ch;margin:0;color:var(--muted)}
+
+/* Galerie */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,18px)}
+.piece{margin:0;overflow:hidden}
+.piece .ph{overflow:hidden;border-radius:2px;background:var(--surface)}
+.piece img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .6s ease}
+.piece:hover img{transform:scale(1.03)}
+.piece figcaption{display:flex;justify-content:space-between;gap:12px;padding-top:10px;font-size:14px}
+.piece figcaption b{font-family:var(--display);font-weight:400;font-size:17px}
+.piece figcaption span{color:var(--muted);text-align:right}
+.piece:not(.feature) figcaption{flex-direction:column;gap:2px}
+.piece:not(.feature) figcaption span{text-align:left}
+.piece.feature{grid-column:span 2;grid-row:span 2}
+.custom{grid-column:span 2;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;justify-content:center;gap:10px}
+.custom h3{font-family:var(--display);font-weight:400;font-size:clamp(24px,2.6vw,32px);line-height:1.1;margin:0;text-wrap:balance}
+.custom p{margin:0;color:var(--muted);max-width:40ch}
+.custom a{font-family:var(--mono);font-size:14px;color:var(--blue);overflow-wrap:anywhere;user-select:all}
+footer a{text-decoration:none}
+.details{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1.4vw,18px);margin-top:clamp(28px,4vw,48px)}
+.details img{aspect-ratio:3/2;object-fit:cover;width:100%;border-radius:2px}
+.details-label{margin-top:48px}
+
+/* Étapes */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px);list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{border-top:2px solid var(--ink);padding-top:18px;counter-increment:s}
+.steps li::before{content:"0" counter(s);font-family:var(--mono);font-size:13px;color:var(--blue);letter-spacing:.1em}
+.steps h3{font-family:var(--display);font-weight:400;font-size:24px;margin:8px 0 6px}
+.steps p{margin:0;color:var(--muted)}
+
+/* Dernier appel */
+.last{text-align:left;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.last h2{font-family:var(--display);font-weight:400;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0;text-wrap:balance}
+.last a.btn{display:inline-block;width:auto;text-decoration:none}
+footer{border-top:1px solid var(--line);padding-block:28px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr}
+  .hero-photo{order:-1}
+  .hero-photo img{aspect-ratio:5/4}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .piece.feature{grid-column:span 2;grid-row:auto}
+  .steps{grid-template-columns:1fr}
+  .last{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .piece figcaption{flex-direction:column;gap:2px}
+  .piece figcaption span{text-align:left}
+  .details{grid-template-columns:1fr 1fr}
+  .details img:last-child{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#">Nostalgie</a>
+    <span class="label">Atelier 83</span>
+  </header>
+
+  <div class="hero">
+    <div>
+      <div class="label">Série limitée · Atelier 83</div>
+      <h1>Nostalgie</h1>
+      <p class="lede">Des enseignes en bois inspirées de l’ancien logo de la Ville d’Aylmer, fabriquées à la main par Jonathan, de l’Atelier 83. Chaque pièce est unique et sort en petite quantité, sans préavis.</p>
+
+      <form id="liste" class="signup" action="https://formspree.io/f/mvkzkder" method="POST">
+        <input type="hidden" name="_subject" value="Nouvelle inscription · Liste Nostalgie">
+        <p class="hp"><label for="gotcha">Ne pas remplir</label><input id="gotcha" name="_gotcha" tabindex="-1" autocomplete="off"></p>
+        <div id="form-body">
+          <h2>Rejoins la liste privée</h2>
+          <p class="sub">Les membres reçoivent les prix dès l’inscription et sont avertis avant chaque drop.</p>
+          <div class="fields">
+            <div class="field"><label for="prenom">Prénom</label><input id="prenom" name="prenom" type="text" autocomplete="given-name" required></div>
+            <div class="field"><label for="courriel">Courriel</label><input id="courriel" name="courriel" type="email" autocomplete="email" inputmode="email" required></div>
+            <div class="field"><label for="commentaire">Commentaire <span class="opt">(facultatif)</span></label><textarea id="commentaire" name="commentaire" rows="3" maxlength="1000" placeholder="Une pièce qui t’intéresse, une idée de sur-mesure, une question…"></textarea></div>
+            <label class="consent" for="consentement"><input id="consentement" name="consentement" type="checkbox" value="oui" required><span>J’accepte de recevoir des courriels au sujet de la série Nostalgie. Je peux me désabonner en tout temps.</span></label>
+            <button class="btn" id="submit" type="submit">M’inscrire à la liste</button>
+          </div>
+          <p class="msg" id="msg" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+
+    <figure class="hero-photo" style="margin:0">
+      <img src="images/hero-manteau.jpg" alt="Enseigne de la série Nostalgie posée sur un manteau de foyer" width="1400" height="1400">
+      <figcaption class="label">Série Nostalgie · Fait à la main à l’Atelier 83</figcaption>
+    </figure>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div><div class="label">La série</div><h2>Un logo, plusieurs finis</h2></div>
+      <p>Même motif, travaillé autrement à chaque pièce : peint aux couleurs d’origine, gravé sur merisier, taillé dans un bois exotique ou tout en noir.</p>
+    </div>
+    <div class="gallery">
+      <figure class="piece feature"><div class="ph"><img src="images/aylmer-love.jpg" alt="Aylmer Love : logo en relief bleu, vert et marine, lettrage AYLMER, cadre et fond en pin bleu" loading="lazy"></div><figcaption><b>Aylmer Love</b><span>La première de la série</span></figcaption></figure>
+      <figure class="piece"><div class="ph"><img src="images/stencil-01.jpg" alt="Stencil - 01 : logo peint au pochoir sur un rond de MDF blanc" loading="lazy"></div><figcaption><b>Stencil - 01</b><span>Peint au pochoir sur MDF blanc</span></figcaption></figure>
+      <figure class="piece"><div class="ph"><img src="images/osage.jpg" alt="Osage : logo en Osage orange sur un fond de triangles en pin bleu" loading="lazy"></div><figcaption><b>Osage</b><span>Osage orange sur pin bleu</span></figcaption></figure>
+      <figure class="piece"><div class="ph"><img src="images/sunset-beach.jpg" alt="Sunset Beach : cadre et logo en yellowheart, fond de chêne blanc en bois de bout" loading="lazy"></div><figcaption><b>Sunset Beach</b><span>Yellowheart et chêne blanc</span></figcaption></figure>
+      <figure class="piece"><div class="ph"><img src="images/black-on-black.jpg" alt="Black on Black on Black : logo noir sur plexiglas noir lustré, fond de pin noir" loading="lazy"></div><figcaption><b>Black on Black on Black</b><span>Plexi noir lustré, pin huilé noir</span></figcaption></figure>
+      <figure class="piece"><div class="ph"><img src="images/vintage-feeling-01.jpg" alt="Vintage Feel - 01 : gravure sur merisier, logo foncé sur fond clair" loading="lazy"></div><figcaption><b>Vintage Feel - 01</b><span>Merisier gravé, fond clair</span></figcaption></figure>
+      <figure class="piece"><div class="ph"><img src="images/vintage-feeling-02.jpg" alt="Vintage Feel - 02 : gravure sur merisier, logo clair sur fond foncé" loading="lazy"></div><figcaption><b>Vintage Feel - 02</b><span>Merisier gravé, fond foncé</span></figcaption></figure>
+      <div class="custom"><div class="label">Sur mesure</div><h3>Tu veux la tienne, à ta façon ?</h3><p>Chaque pièce peut être refaite autrement : un autre bois, d’autres couleurs, une autre grandeur. Écris à Jonathan.</p><a href="mailto:atelier83.jm@gmail.com">atelier83.jm@gmail.com</a></div>
+    </div>
+
+    <div class="label details-label">Vu de près</div>
+    <div class="details">
+      <img src="images/detail-pochoir.jpg" alt="Gros plan sur les bandes peintes bleues et vertes" loading="lazy">
+      <img src="images/detail-triangles.jpg" alt="Coin du cadre avec la marqueterie de triangles et une entretoise en acier" loading="lazy">
+      <img src="images/detail-black-on-black.jpg" alt="Profil de Black on Black on Black montrant le relief des lattes noires" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div><div class="label">Les drops</div><h2>Comment ça marche</h2></div>
+      <p>Aucune pièce n’est affichée en boutique. Tout passe par la liste.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Tu t’inscris</h3><p>Ton prénom et ton courriel. Rien d’autre.</p></li>
+      <li><h3>Tu reçois les prix</h3><p>La liste des pièces et des prix, réservée aux membres.</p></li>
+      <li><h3>Tu es averti en premier</h3><p>Chaque drop est annoncé à la liste seulement. Premier arrivé, premier servi.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap last">
+    <h2>Quand une pièce est partie, elle ne revient pas.</h2>
+    <a class="btn" href="#liste">Rejoindre la liste</a>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer>
+    <span class="label">Nostalgie · Une série de l’Atelier 83</span>
+    <span class="label"><a href="mailto:atelier83.jm@gmail.com">atelier83.jm@gmail.com</a> · aylmerlove.com · © 2026</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var form = document.getElementById('liste');
+  var msg = document.getElementById('msg');
+  var btn = document.getElementById('submit');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    msg.className = 'msg'; msg.textContent = '';
+    btn.disabled = true; btn.textContent = 'Inscription…';
+        fetch(form.action, { method:'POST', headers:{'Accept':'application/json'}, body:new FormData(form) })
+      .then(function(r){ if(!r.ok) throw new Error(r.status); done(); })
+      .catch(function(){
+        btn.disabled = false; btn.textContent = 'M’inscrire à la liste';
+        msg.className = 'msg err';
+        msg.textContent = /claude|localhost|^$/.test(location.hostname)
+          ? 'Aperçu seulement : le formulaire fonctionnera une fois le site en ligne.'
+          : 'L’inscription n’a pas fonctionné. Vérifie ta connexion et réessaie.';
+      });
+  });
+  function done(){
+    var body = document.getElementById('form-body');
+    body.classList.add('done');
+    body.innerHTML = '<h2>Tu es sur la liste.</h2><p class="sub" style="margin:0">Les prix et l’avis du prochain drop vont arriver par courriel. Ajoute l’adresse de Nostalgie à tes contacts pour ne rien manquer.</p>';
+  }
+})();
+</script>
+
+</body>
+</html>
